@@ -1,0 +1,22 @@
+<h1>
+<%= "Welcome to the longest word-game!" %>
+</h1>
+
+<h2>
+<%= "Here is your grid:" %>
+</h2>
+
+<div class="container">
+  <div class= "row text-center">
+  <%= @grid.join("   ") %>
+    <form action="/score" method="get">
+  <input type="hidden" name="start_time" value='<%= Time.now %>'>
+  <input type="text" name="guess" placeholder="Your guess">
+  <input type="submit" class="btn btn-primary" >
+  <input type="hidden" name="grid" value="<%= @grid.join %>">
+</form>
+  </div>
+</div>
+
+
+
